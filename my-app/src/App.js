@@ -16,8 +16,10 @@ function App() {
                 const res = response.data;
                 const deptArray = res.departments
                 const defArray = res.definitions
+                const questionArray = res.questions;
                 console.log(deptArray);
                 console.log(defArray);
+                console.log(questionArray);
         })}
 
     let department = "Internal Medicine"
@@ -29,6 +31,9 @@ function App() {
         })
             .then((response) => {
                 const res = response.data.businesses;
+                res.map((bis) => (
+                    console.log(bis.name + "-" + isDr(bis.name))
+                ))
                 console.log(res);
             })}
 
@@ -53,10 +58,7 @@ function App() {
                 {/* new line start*/}
                 <p>To get your profile details: </p><button onClick={getDataSpecialties}>Specialites</button>
                 <button onClick={getDataDoctors}>Doctors</button>
-                {profileData && <div>
-                    <p>Profile name: {profileData.profile_name}</p>
-                    <p>About me: {profileData.about_me}</p>
-                </div>
+
                 }
                 {/* end of new line */}
             </header>
@@ -74,5 +76,18 @@ function spacedTextToDashed(text){
     let combinedText = textSplit.join();
     console.log(combinedText);
     return combinedText;
+}
+let drDict = ['MD', 'DO', 'DPM', 'DDS', 'DMD', 'DVM', 'DPT', 'DNP', 'PharmD', 'PsyD', 'AuD', 'DC', 'OD', 'PhD', 'DrPH', 'DSW', 'DNSc'];
+function isDr(name){
+    let spltTxt = name.split(" ")
+    console.log(spltTxt);
+    for (let i = 0; i<spltTxt.length; i++){
+        for(let j = 0; j<drDict.length; j++){
+            if(spltTxt[i]===drDict[j]){
+                return "Dr"
+            }
+        }
+    }
+    return "Center"
 }
 export default App;

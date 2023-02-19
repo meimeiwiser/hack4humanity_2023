@@ -1,0 +1,4 @@
+{
+    "API_KEY" = "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"
+    "YELP_TOKEN" = "7-ZL3Ahz1NT54QYBs-ttyU8vw3zJ83k8JeNxQDI_2xNG1D3CoczNnlIAeRUoKdJ_bPi55Awa_F-LkQs5xoSLQuSIn-hhmPB6_ryqgPLHGdM4V0kzwv-ny0FJLzDxY3Yx"
+}
