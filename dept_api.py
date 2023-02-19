@@ -61,10 +61,13 @@ def get_questions(symptoms):
     ques_list.append(q)
     return(ques_list)
 
-def get_def_dict(symptoms):
+def get_def_list(symptoms):
+    '''
+    returns list of definitions, with the order corresponding to the order of the dept list
+    '''
     dept_list=get_dept_list(symptoms)
     dept_def_dict=department_def.dept_definition_dict
-    dept_def_ret={}
+    dept_def_ret=[]
     for dept in dept_list:
         if dept in dept_def_dict:
             definition=dept_def_dict[dept]
@@ -80,7 +83,7 @@ def get_def_dict(symptoms):
             )
             definition=definition_response['choices'][0]['text'][2:]
         #try/except? 
-        dept_def_ret[dept]=definition
+        dept_def_ret.append(definition)
     return dept_def_ret
 
 
@@ -99,7 +102,7 @@ def departments():
             symptoms+=ch
     
     dept_list=get_dept_list(symptoms)
-    dept_def_return=get_def_dict(symptoms)
+    dept_def_return=get_def_list(symptoms)
     questions=get_questions(symptoms)
     return json.dumps({
         'departments':dept_list,
