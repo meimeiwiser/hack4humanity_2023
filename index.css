@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #E87C64;
+}
+
+main {
+    font-family: "Inter";
+    margin: auto;
+    background-color: #E87C64;
+    height: 100vh;
+}
+
+.heading {
+    padding: 1rem;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.heading > img {
+    width: 2.5rem;
+}
+
+.heading > h1 {
+    margin: 0;
+    color: #E87C64;
+}
+
+main > .appBody {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.appBody > img {
+    width: 33rem;
+    margin: 2rem;
+}
+
+.appBody > h1 {
+    color: #373737;
+    font-size: 3rem;
+    
+}
+
+.appBody h2 {
+    font-size: 1.5rem;
+    color: #373737;
+}
+
+.appBody > p {
+    font-size: 1.5rem;
+    width: 60%;
+    color: #373737;
+    margin: 0;
+}
+
+.appBody button {
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 3rem;
+    padding: 0 1.5rem;
+
+    /*align-self: flex-end;*/
+    /*margin-right: 5rem;*/
+}
