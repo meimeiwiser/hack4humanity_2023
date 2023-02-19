@@ -1,105 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Symptoms</title>
+    <link rel="stylesheet" href="./symptoms.css">
+    <script type="text/javascript" src="./symptoms.js" async defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="assets/tinylogowhite.png" alt="logo">
+            <h1>HealthMatch</h1>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section class="centered">
+            <h2>Enter Symptoms</h2>
+            <form action="">
+                
+                <fieldset>
+                    <span class="inputWrapper">
+                        <input type="text" name="" id="add-symptoms" placeholder="e.g. I have a headache, and my stomache hurts.">
+                    </span>
+                    
+                </fieldset>
+                
+                <br>
+               
+                <fieldset class="flexField">
+                    <span class="inputWrapper">
+                        <input type="search" name="" id="add-providers" placeholder="Enter a Care Provider" list="provider-list">
+                    </span>
+                    <span class="inputWrapper">
+                        <input type="text" name="" id="add-zip" placeholder="Enter Zip Code">
+                    </span>
+                </fieldset>
+    
+                <ul>
+                </ul>
+    
+                <datalist id="provider-list">
+                    <option value="Sutter Health"></option>
+                    <option value="Kaiser Permanente"></option>
+                    <option value="Other"></option>
+                </datalist>
+                <br>
+                <button type="button" id="submit">
+                    <strong>Submit Information</strong>
+                </button>
+    
+            </form>
 
-:root {
-    font-family: "Inter", Helvetica, sans-serif;
-}
+        </section>
 
-ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    padding: 0;
-}
 
-li {
-    display: flex;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: white;
-    color: #E87C64;
-    border-radius: 3rem;
-    font-size: 1rem;
-}
+    </main>
 
-body {
-    margin: 0;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-section {
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    background-color: #E87C64;
-    padding: 2rem;
-    width: 30rem;
-}
-
-nav {
-    font-family: "Inter";
-    padding: 1rem;
-    background-color: #E87C64;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-}
-
-nav > img {
-    width: 2.5rem;
-}
-
-h1 {
-    font-size: 2rem;
-    margin: 0;
-    color: white;
-}
-fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-.inputWrapper {
-    display: inline;
-}
-
-.centered h2{
-    font-size: 2.5rem;
-}
-
-.inputWrapper > input {
-    font-size: 1rem;
-    padding: 1rem 1rem;
-    border-radius: 2rem;
-    border: none;
-    outline: none;
-}
-
-.flexField {
-    display: flex;
-    flex-direction: row;
-    gap: 3.5rem;
-}
-
-#add-symptoms {
-    width: 28rem;
-}
-
-#add-providers {
-    width: 14rem;
-}
-
-#submit {
-    padding: 1rem 2rem;
-    background-color: white;
-    border: none;
-    border-radius: 3rem;
-}
+</body>
+</html>
