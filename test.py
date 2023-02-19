@@ -5,4 +5,4 @@ for ch in symptoms_broken_str:
             symptoms+=' '
         else:
             symptoms+=ch
-print(symptoms)
+symptoms

@@ -41,7 +41,7 @@ def get_dept_list(symptoms):
 def get_questions(symptoms):
     response = openai.Completion.create(
     model="text-davinci-003",
-    prompt=f"give me a list of 3 questions very specific to my symptoms to ask the doctor when I go meet them. Only give a list of questions. Do not number the list, and separate the questions using underscores, remove any new line(\n) tabs. My symptoms are as follows: {symptoms}. Do not let any incomplete sentences through",
+    prompt=f"give a list of 3 questions for the patient to ask the doctor, very specific to their symptoms to ask the doctor when the patient goes to meet the doctor. Only give a list of questions. Do not number the list, and separate the questions using underscores, remove any new line(\n) tabs. The symptoms of the patient are as follows: {symptoms}. Do not let any incomplete sentences through",
     temperature=0,
     max_tokens=60,
     top_p=1,
