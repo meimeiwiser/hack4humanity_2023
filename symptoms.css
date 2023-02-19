@@ -4,6 +4,24 @@
     font-family: "Inter", Helvetica, sans-serif;
 }
 
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: #E87C64;
+    border-radius: 3rem;
+    font-size: 1rem;
+}
+
 body {
     margin: 0;
 }
@@ -15,6 +33,7 @@ main {
 }
 
 section {
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
@@ -76,4 +95,11 @@ fieldset {
 
 #add-providers {
     width: 14rem;
+}
+
+#submit {
+    padding: 1rem 2rem;
+    background-color: white;
+    border: none;
+    border-radius: 3rem;
 }
