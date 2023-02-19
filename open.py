@@ -1,3 +1,5 @@
+#Testing open AI API functionality and working w data
+
 import os
 import openai
 import config
@@ -5,7 +7,7 @@ import department_def
 
 openai.api_key = config.api_key
 symptoms="pain in eye" #sample to make sure this runs 
-
+'''
 def get_dept_name(symptoms):
     #symptoms="pain in the big toe"
     response = openai.Completion.create(
@@ -58,7 +60,34 @@ def get_def_dict():
         dept_def_ret[dept]=definition
     return dept_def_ret
 
+'''
+symptoms= "pain in the left chest"
+def get_questions(symptoms):
+    response = openai.Completion.create(
+    model="text-davinci-003",
+    prompt=f"give me a list of 3 questions very specific to my symptoms to ask the doctor when I go meet them. Only give a list of questions. Do not number the list, and separate the questions using underscores, remove any new line(\n) tabs. My symptoms are as follows: {symptoms}. Do not let any incomplete sentences through",
+    temperature=0,
+    max_tokens=60,
+    top_p=1,
+    frequency_penalty=0.5,
+    presence_penalty=0
+    )
+    questions_str=response["choices"][0]["text"][2:]
+    ques_list=[]
+    q=""
+    for ch in questions_str:
+        if ch=='_':
+            ques_list.append(q)
+            q=""
+            continue
+        else:
+            q+=ch
+    ques_list.append(q)
+    return(ques_list)
 
+
+    
+get_questions(symptoms)
 
 
 
