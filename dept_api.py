@@ -10,7 +10,7 @@ def get_dept_name(symptoms):
     #symptoms="pain in the big toe"
     response = openai.Completion.create(
     model="text-davinci-003",
-    prompt=f"ONLY give a list of departments of medicine/ types of doctor for the following: A patient has the following symptoms:{symptoms}. Only answer in a maximum of 10 words. Give your answer as a comma separated list",
+    prompt=f"ONLY give a list of departments of medicine/ types of doctor for the following: A patient has the following symptoms:{symptoms}. Only answer in a maximum of 10 words. Give your answer as a comma separated list. Please never recommend surgery.",
     temperature=0,
     max_tokens=60,
     top_p=1,

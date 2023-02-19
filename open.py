@@ -6,13 +6,13 @@ import config
 import department_def
 
 openai.api_key = config.api_key
-symptoms="pain in eye" #sample to make sure this runs 
-'''
+symptoms="stomach ache" #sample to make sure this runs 
+
 def get_dept_name(symptoms):
     #symptoms="pain in the big toe"
     response = openai.Completion.create(
     model="text-davinci-003",
-    prompt=f"ONLY give a list of departments of medicine/ types of doctor for the following: A patient has the following symptoms:{symptoms}. Only answer in a maximum of 10 words. Give your answer as a comma separated list",
+    prompt=f"ONLY give a list of departments of medicine/ types of doctor for the following: A patient has the following symptoms:{symptoms}. Only answer in a maximum of 10 words. Give your answer as a comma separated list. Please never recommend surgery.",
     temperature=0,
     max_tokens=60,
     top_p=1,
@@ -21,7 +21,9 @@ def get_dept_name(symptoms):
     )
     dept_str_ret=response["choices"][0]["text"]
     return dept_str_ret
+print(get_dept_name(symptoms))
 
+'''
 def get_dept_list(symptoms):
     dept_str=get_dept_name(symptoms)[2:]
     dept_list=[]
@@ -61,6 +63,8 @@ def get_def_dict():
     return dept_def_ret
 
 '''
+
+'''
 symptoms= "pain in the left chest"
 def get_questions(symptoms):
     response = openai.Completion.create(
@@ -84,10 +88,10 @@ def get_questions(symptoms):
             q+=ch
     ques_list.append(q)
     return(ques_list)
-
+'''
 
     
-get_questions(symptoms)
+#get_questions(symptoms)
 
 
 
