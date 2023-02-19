@@ -1,6 +1,7 @@
 Specialties = {
 
     elements: {
+        loader: document.querySelector(".loading"),
         ul: document.querySelector("ul"),
         titleList: [],
         descriptionList: [],
@@ -90,6 +91,11 @@ Specialties = {
             const baseURL = new URL('file:///Users/liamahearn/Desktop/H4H2023/hack4humanity_2023');
             const newURL = new URL(title, baseURL);
         },
+        
+        revealContent: function(){
+            Specialties.elements.loader.remove();
+        },
+
 
     },
 
@@ -102,6 +108,7 @@ Specialties = {
 
         setTimeout(Specialties.helpers.createMixList, 15000);
         setTimeout(Specialties.helpers.generateList, 15000);
+        setTimeout(Specialties.helpers.revealContent, 15000);
     },
 
 };
