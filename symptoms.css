@@ -1,0 +1,41 @@
+:root {
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    background-color: #377F80;
+    padding: 2rem;
+    width: 30rem;
+}
+
+nav {
+    padding: 1rem;
+    background-color: #377F80;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+}
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.inputWrapper {
+    display: inline;
+}
