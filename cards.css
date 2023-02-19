@@ -98,3 +98,25 @@ li > h2{
 li > p{
     color: #494949;
 }
+
+
+.loading {
+    height: 8rem;
+    width: 8rem;
+    z-index: 1;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform-origin: center;
+    animation: spin 2s linear infinite;   
+    /*animation-timing-function: ease-in-out;*/
+}
+
+.loading > img {
+    width: 100%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
