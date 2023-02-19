@@ -1,0 +1,13 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main {
+    margin: auto;
+    width: 60%;
+    height: 400px;
+    background-color: #00a4a2;
+}
+
