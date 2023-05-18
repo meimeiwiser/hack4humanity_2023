@@ -120,7 +120,11 @@ li > p{
     top: 45%;
     left: 45%;
     transform-origin: center;
+<<<<<<< Updated upstream
     animation: spin 2s linear infinite;   
+=======
+    animation: spin 2s linear infinite;
+>>>>>>> Stashed changes
     /*animation-timing-function: ease-in-out;*/
 }
 
@@ -131,4 +135,8 @@ li > p{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

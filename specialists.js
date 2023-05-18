@@ -25,7 +25,6 @@ Specialists = {
             fetch(`http://127.0.0.1:5000/yelp-doctors?specialist=${Specialists.elements.specialty}&location=${Specialists.elements.zip}`)
                 .then((response) => response.json())
                 .then((data) => {
-                    console.log(data);
                     let res = data.businesses;
                     res.map((bis) => {
                         Specialists.elements.imgList.push(bis.image_url);
