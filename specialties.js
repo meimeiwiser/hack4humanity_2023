@@ -57,7 +57,7 @@ Specialties = {
             butt = document.createElement("button");
             buttImg = document.createElement("img");
 
-            const baseURL = new URL('file:///Users/brianwiebe/WebstormProjects/hack4humanityredo/specialists.html');
+            const baseURL = new URL('specialties.html'); //TODO: Change for your instance
             const addition = `?specialty=${title}&location=${Specialties.elements.zip}`;
             newURL = new URL(addition, baseURL);
             //const newURL = new URL(title, baseURL);
@@ -65,7 +65,6 @@ Specialties = {
             //console.log(JSON.stringify(newURL));
 
             //Give the button a link that will take to new page on click
-            //butt.setAttribute("onclick", "window.location.href='file:///Users/liamahearn/Desktop/H4H2023/hack4humanity_2023/sutter.html'");
             butt.setAttribute("onclick", "window.location.href='"+ newURL +"'");
 
             buttImg.setAttribute("src", "assets/link-button.png");
@@ -88,10 +87,15 @@ Specialties = {
         },
 
         linkFunction: function(obj) {
-            const baseURL = new URL('file:///Users/liamahearn/Desktop/H4H2023/hack4humanity_2023');
+            const baseURL = new URL('/'); //TODO: Base Folder Location
             const newURL = new URL(title, baseURL);
         },
         
+        revealContent: function(){
+            Specialties.elements.loader.remove();
+        },
+
+
         revealContent: function(){
             Specialties.elements.loader.remove();
         },
@@ -106,9 +110,9 @@ Specialties = {
         //Specialties.helpers.createMixList();
         //Specialties.helpers.generateList();
 
-        setTimeout(Specialties.helpers.createMixList, 15000);
-        setTimeout(Specialties.helpers.generateList, 15000);
-        setTimeout(Specialties.helpers.revealContent, 15000);
+        setTimeout(Specialties.helpers.createMixList, 20000);
+        setTimeout(Specialties.helpers.generateList, 20000);
+        setTimeout(Specialties.helpers.revealContent, 20000);
     },
 
 };

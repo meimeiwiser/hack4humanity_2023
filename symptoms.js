@@ -61,7 +61,7 @@ const SymptomPage = {
             SymptomPage.elements.providerString = SymptomPage.elements.providerString.slice(0,-1);
             SymptomPage.elements.zipString = SymptomPage.elements.zipString.slice(0,-1);
 
-            const baseURL = new URL('file:///Users/brianwiebe/WebstormProjects/hack4humanityredo/specialties.html');
+            const baseURL = new URL('specialties.html'); //TODO: Will need to change for individual instance
             const addition = `?symptoms=${val}&providers=${SymptomPage.elements.providerString}&zips=${SymptomPage.elements.zipString}`;
             const newURL = new URL(addition, baseURL);
 
@@ -69,6 +69,7 @@ const SymptomPage = {
             console.log(SymptomPage.elements.providerString);
             console.log(SymptomPage.elements.zipString);
             console.log(newURL.toString());
+            window.location.href = newURL;
         }
 
     },
