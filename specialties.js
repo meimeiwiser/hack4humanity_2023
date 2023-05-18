@@ -110,15 +110,9 @@ Specialties = {
         //Specialties.helpers.createMixList();
         //Specialties.helpers.generateList();
 
-<<<<<<< Updated upstream
-        setTimeout(Specialties.helpers.createMixList, 15000);
-        setTimeout(Specialties.helpers.generateList, 15000);
-        setTimeout(Specialties.helpers.revealContent, 15000);
-=======
         setTimeout(Specialties.helpers.createMixList, 20000);
         setTimeout(Specialties.helpers.generateList, 20000);
         setTimeout(Specialties.helpers.revealContent, 20000);
->>>>>>> Stashed changes
     },
 
 };
