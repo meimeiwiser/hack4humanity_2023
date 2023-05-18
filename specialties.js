@@ -57,7 +57,7 @@ Specialties = {
             butt = document.createElement("button");
             buttImg = document.createElement("img");
 
-            const baseURL = new URL('file:///Users/brianwiebe/Downloads/BACKUP/specialists.html');
+            const baseURL = new URL('specialties.html'); //TODO: Change for your instance
             const addition = `?specialty=${title}&location=${Specialties.elements.zip}`;
             newURL = new URL(addition, baseURL);
             //const newURL = new URL(title, baseURL);
