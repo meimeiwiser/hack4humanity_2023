@@ -65,7 +65,6 @@ Specialties = {
             //console.log(JSON.stringify(newURL));
 
             //Give the button a link that will take to new page on click
-            //butt.setAttribute("onclick", "window.location.href='file:///Users/liamahearn/Desktop/H4H2023/hack4humanity_2023/sutter.html'");
             butt.setAttribute("onclick", "window.location.href='"+ newURL +"'");
 
             buttImg.setAttribute("src", "assets/link-button.png");
@@ -88,7 +87,7 @@ Specialties = {
         },
 
         linkFunction: function(obj) {
-            const baseURL = new URL('file:///Users/brianwiebe/Desktop/H4H ToDo/BACKUP');
+            const baseURL = new URL('/'); //TODO: Base Folder Location
             const newURL = new URL(title, baseURL);
         },
         
